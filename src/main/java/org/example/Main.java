@@ -20,7 +20,7 @@ public class Main {
                 taskService.listTask();
                 break;
             case "update":
-                if (args.length < 2) {
+                if (args.length < 3) {
                     System.out.println("Digite o id e a atualizacao de status: progress | done");
                     return;
                 }
@@ -32,11 +32,9 @@ public class Main {
                     return;
                 }
                 taskService.deleteTask(Integer.parseInt(args[1]));
+                break;
             default:
-                if (args.length == 0) {
-                    System.out.println("Use um comando: add | list | update | delete");
-                    return;
+                System.out.println("Comando inválido. Use: add | list | update | delete");
                 }
         }
     }
-}
