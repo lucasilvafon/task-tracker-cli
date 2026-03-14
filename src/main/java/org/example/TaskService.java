@@ -12,7 +12,7 @@ public class TaskService {
 
     public void addTask(String description) throws Exception {
 
-        int id = tasks.size() + 1;
+        int id = generateId();
 
         Task task = new Task(id, description);
 
@@ -69,7 +69,7 @@ public class TaskService {
             }
         }
         if (deleteTask == null) {
-            System.out.println("Tarefa não encontrada");
+            System.out.println("Tarefa nao encontrada");
             return;
         }
         tasks.remove(deleteTask);
@@ -86,6 +86,16 @@ public class TaskService {
             }
         }
         return null;
+    }
+
+    private int generateId(){
+        int maxId = 0;
+        for (Task task : tasks){
+            if (task.getId() > maxId){
+                maxId = task.getId();
+            }
+        }
+        return maxId + 1;
     }
 }
 
