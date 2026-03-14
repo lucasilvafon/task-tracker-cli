@@ -13,6 +13,9 @@ public class Main {
 
 
         switch (args[0]){
+            case "help":
+                taskService.printHelp();
+                break;
             case "add":
                 taskService.addTask(args[1]);
                 break;

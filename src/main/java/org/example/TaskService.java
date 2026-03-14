@@ -10,6 +10,17 @@ public class TaskService {
         this.tasks = tasks;
     }
 
+    public void printHelp(){
+        System.out.println("Task Tracker CLI");
+        System.out.println();
+        System.out.println("Comandos");
+        System.out.println("add         \"descricao\"             adicionar tarefa");
+        System.out.println("list                                listar tarefa");
+        System.out.println("update      <id> progress           marcar como em progresso");
+        System.out.println("update      <id> done               marcar como em concluida");
+        System.out.println("delete      <id>                    adicionar tarefa");
+    }
+
     public void addTask(String description) throws Exception {
 
         int id = generateId();
@@ -28,14 +39,15 @@ public class TaskService {
             System.out.println("Nenhuma tarefa encontrada");
             return;
         }
-
         for (Task task : tasks) {
-            System.out.println(
-                    task.getId() +
-                            ". [" + task.getStatus() + "] " +
-                            task.getDescription()
+            System.out.printf(
+                    "%-3d %-12s %s%n",
+                    task.getId(),
+                    task.getStatus(),
+                    task.getDescription()
             );
         }
+
     }
     public void updateTask(int id, String status) throws Exception {
         Task updateTask = fingById(id);
@@ -53,7 +65,7 @@ public class TaskService {
                System.out.println("Status atualizado com sucesso");
                break;
            default:
-               System.out.println("STATUS INVALIDO");
+               System.out.println("Status inválido. Use: progress | done");
                break;
        }
         TaskStorage.saveTasks(tasks);
