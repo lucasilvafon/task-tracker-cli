@@ -25,9 +25,9 @@ public class Task {
     }
 
     public void markProgress() {
-        this.status = "IN PROGRESS";
+        this.status = "[ IN PROGRESS ]";
     }
     public void markDone() {
-        this.status = "DONE";
+        this.status = "[ DONE ]";
     }
 }
