@@ -153,9 +153,8 @@ Exemplo:
 * geração de executável `.exe`
 
 ---
-
-# Autor
-
+```
+## 4. Autor
 Lucas Fonseca
 
 Reference: https://roadmap.sh/projects/task-tracker
