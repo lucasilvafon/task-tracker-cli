@@ -96,7 +96,7 @@ cd task-tracker-cli
 
 Exibe todos os comandos disponíveis do CLI.
 
-help
+ help
 
 Saída no terminal:
 
@@ -112,13 +112,13 @@ delete      <id>                    remover tarefa
 
 Exemplo de saída:
 
-```
+
 ID  STATUS        DESCRIPTION
 --------------------------------
 1   TODO          Aprender Java
 2   IN PROGRESS   Criar CLI
 3   DONE          Configurar Gradle
-```
+
 
 ---
 
@@ -126,12 +126,11 @@ ID  STATUS        DESCRIPTION
 
 As tarefas são armazenadas no arquivo:
 
-```
 tasks.json
-```
+
 
 Exemplo:
-```
+
 [
   {
     "id": 1,
@@ -139,7 +138,7 @@ Exemplo:
     "status": "TODO"
   }
 ]
-```
+
 ---
 
 # Tecnologias utilizadas
