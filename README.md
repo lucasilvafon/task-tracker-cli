@@ -96,7 +96,7 @@ cd task-tracker-cli
 
 Exibe todos os comandos disponíveis do CLI.
 
-task help
+help
 
 Saída no terminal:
 
